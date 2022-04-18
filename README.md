@@ -1,5 +1,7 @@
 # pymysc
 
+[GitHub Pages](https://dkobayas.github.io/pymisc/index.html)
+
 Miscellaneous things relating with Python coding.
 Components:
 - README.md
@@ -32,3 +34,4 @@ To see on GitHub Pages
 sphinx-quickstart ./docs
 sphinx-apidoc -f -o docs/source pyskelton
 sphinx-build docs/source/ docs
+
