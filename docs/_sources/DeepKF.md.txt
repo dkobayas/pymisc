@@ -1,4 +1,4 @@
-# Deep Kalman Filter
+# Deep Kalman Filter(DeepKF)
 
 DKFを実装し、利用しやすい形のAPIに落とし込みたい。
 

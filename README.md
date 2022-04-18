@@ -1,11 +1,14 @@
 # pymysc
 
-[GitHub Pages](https://dkobayas.github.io/pymisc/index.html)
+[GitHub Pages](https://dkobayas.github.io/pymisc/index.html)  
+[Read The Docs](https://pymisc.readthedocs.io/en/latest/)
 
 Miscellaneous things relating with Python coding.
 Components:
 - README.md
 - pyskelton/
+    - _ _ init _ _.py
+    - example.py
 - docs/
     - pyskelton package
     - tips
@@ -20,18 +23,11 @@ Components:
 ```sh
 $ python3.8 -m venv venv
 $ . ./venv/bin/activate
-$ pip install sphinx sphinx-rtd-theme myst-parser nbsphinx
+$ pip install -e .
 ```
 
-# pyskelton
+## Motivation
 
-Python project skelton
-
-# docs
-
-To see on GitHub Pages
-
-sphinx-quickstart ./docs
-sphinx-apidoc -f -o docs/source pyskelton
-sphinx-build docs/source/ docs
+This can be used as the template of the python package to share.
+Not only such an usage, docs can be used to share some tips, reminders, and idea notes.
 

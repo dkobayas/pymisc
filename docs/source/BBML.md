@@ -1,4 +1,4 @@
-# Baseball Machine Learning
+# Baseball Machine Learning(BBML)
 
 成績予想とか、打席予想とか、配球予想とか
 

@@ -6,3 +6,4 @@ Tips
    :caption: Contents:
 
    docstring
+   sphinxdocs

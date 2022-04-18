@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Directed Acyclic Graph Learning and Analysis &mdash; pymisc 1.0.0 documentation</title>
+  <title>Directed Acyclic Graph Learning and Analysis(DAGLAs) &mdash; pymisc 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Baseball Machine Learning" href="BBML.html" />
-    <link rel="prev" title="Deep Kalman Filter" href="DeepKF.html" /> 
+    <link rel="next" title="Baseball Machine Learning(BBML)" href="BBML.html" />
+    <link rel="prev" title="Deep Kalman Filter(DeepKF)" href="DeepKF.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,10 +42,16 @@
 <li class="toctree-l1"><a class="reference internal" href="modules.html">pyskelton</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tips.html">Tips</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ideanote.html">Idea Note</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="DeepKF.html">Deep Kalman Filter</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Directed Acyclic Graph Learning and Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BBML.html">Baseball Machine Learning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="KnoGra.html">Knowledge Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DeepKF.html">Deep Kalman Filter(DeepKF)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Directed Acyclic Graph Learning and Analysis(DAGLAs)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">ベースとなる学習手法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">制限の入れ方など、追加機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">可視化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">因果構造図の利用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="BBML.html">Baseball Machine Learning(BBML)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="KnoGra.html">Knowledge Graph(KnoGra)</a></li>
 </ul>
 </li>
 </ul>
@@ -65,7 +71,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="ideanote.html">Idea Note</a> &raquo;</li>
-      <li>Directed Acyclic Graph Learning and Analysis</li>
+      <li>Directed Acyclic Graph Learning and Analysis(DAGLAs)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/DAGLAs.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -75,17 +81,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="directed-acyclic-graph-learning-and-analysis">
-<h1>Directed Acyclic Graph Learning and Analysis<a class="headerlink" href="#directed-acyclic-graph-learning-and-analysis" title="Permalink to this headline"></a></h1>
+  <section id="directed-acyclic-graph-learning-and-analysis-daglas">
+<h1>Directed Acyclic Graph Learning and Analysis(DAGLAs)<a class="headerlink" href="#directed-acyclic-graph-learning-and-analysis-daglas" title="Permalink to this headline"></a></h1>
 <p>DAGの学習+可視化+利用をまとめておきたい。</p>
+<section id="id1">
+<h2>ベースとなる学習手法<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<p>各々はPyTorchでの実装を試してみたい。</p>
+<ul class="simple">
+<li><p>CausalNex</p></li>
+<li><p>DAG-GNN</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>制限の入れ方など、追加機能<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<p>制限の入れ方として、各エッジの初期値と誤差を定義して、(初期値からの差分/誤差)に基づいた損失を課すことで、既知の因果構造をベースにした調整、及びエッジの追加ができるようにできないか。<br />
+tabuを設定するときも、初期値を 0 として、誤差が非常に小さいものと定義すれば、同様の実装で可能そうだと考えた。</p>
+</section>
+<section id="id3">
+<h2>可視化<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<p>Plotlyを使ってみる。</p>
+<ul class="simple">
+<li><p>エッジの正負での色分け</p></li>
+<li><p>エッジの大きさで強さを表現</p></li>
+<li><p>ノードの形、色、など</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>因果構造図の利用<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
+<p>ナレッジグラフ、ベイジアンネットワークなど</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="DeepKF.html" class="btn btn-neutral float-left" title="Deep Kalman Filter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="BBML.html" class="btn btn-neutral float-right" title="Baseball Machine Learning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="DeepKF.html" class="btn btn-neutral float-left" title="Deep Kalman Filter(DeepKF)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BBML.html" class="btn btn-neutral float-right" title="Baseball Machine Learning(BBML)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
