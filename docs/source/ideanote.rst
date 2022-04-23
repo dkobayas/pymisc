@@ -8,5 +8,5 @@ Idea Note
    DeepKF
    KnoGra
    DAGLAs
-   GraphvizPlotly
+   GraphVizPlotly
    BBML

@@ -8,6 +8,7 @@ DAGの学習+可視化+利用をまとめておきたい。
 - CausalNex
 - DAG-GNN
 
+## 想定構造
 ```sh
 daglas/  
 |- __init__.py

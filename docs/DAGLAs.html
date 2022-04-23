@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Baseball Machine Learning(BBML)" href="BBML.html" />
+    <link rel="next" title="GraphVizPlotly(gvplotly)" href="GraphVizPlotly.html" />
     <link rel="prev" title="Knowledge Graph(KnoGra)" href="KnoGra.html" /> 
 </head>
 
@@ -46,11 +46,13 @@
 <li class="toctree-l2"><a class="reference internal" href="KnoGra.html">Knowledge Graph(KnoGra)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Directed Acyclic Graph Learning and Analysis(DAGLAs)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">ベースとなる学習手法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">制限の入れ方など、追加機能</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">可視化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">因果構造図の利用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">想定構造</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">制限の入れ方など、追加機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">可視化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">因果構造図の利用</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="GraphVizPlotly.html">GraphVizPlotly(gvplotly)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BBML.html">Baseball Machine Learning(BBML)</a></li>
 </ul>
 </li>
@@ -91,6 +93,9 @@
 <li><p>CausalNex</p></li>
 <li><p>DAG-GNN</p></li>
 </ul>
+</section>
+<section id="id2">
+<h2>想定構造<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>daglas/  
 <span class="p">|</span>- __init__.py
 <span class="p">|</span>- learner.py <span class="c1"># DAG learning</span>
@@ -107,13 +112,13 @@
 </div>
 <p>出力はnx.DiGraph()形式にすることで、gvplotlyと連携が取れるようにする。</p>
 </section>
-<section id="id2">
-<h2>制限の入れ方など、追加機能<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<section id="id3">
+<h2>制限の入れ方など、追加機能<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
 <p>制限の入れ方として、各エッジの初期値と誤差を定義して、(初期値からの差分/誤差)に基づいた損失を課すことで、既知の因果構造をベースにした調整、及びエッジの追加ができるようにできないか。<br />
 tabuを設定するときも、初期値を 0 として、誤差が非常に小さいものと定義すれば、同様の実装で可能そうだと考えた。</p>
 </section>
-<section id="id3">
-<h2>可視化<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<section id="id4">
+<h2>可視化<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
 <p>Plotlyを使ってみる。</p>
 <ul class="simple">
 <li><p>エッジの正負での色分け</p></li>
@@ -121,8 +126,8 @@ tabuを設定するときも、初期値を 0 として、誤差が非常に小�
 <li><p>ノードの形、色、など</p></li>
 </ul>
 </section>
-<section id="id4">
-<h2>因果構造図の利用<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
+<section id="id5">
+<h2>因果構造図の利用<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h2>
 <p>ナレッジグラフ、ベイジアンネットワークなど</p>
 </section>
 </section>
@@ -132,7 +137,7 @@ tabuを設定するときも、初期値を 0 として、誤差が非常に小�
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="KnoGra.html" class="btn btn-neutral float-left" title="Knowledge Graph(KnoGra)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="BBML.html" class="btn btn-neutral float-right" title="Baseball Machine Learning(BBML)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GraphVizPlotly.html" class="btn btn-neutral float-right" title="GraphVizPlotly(gvplotly)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

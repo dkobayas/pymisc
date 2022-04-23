@@ -17,7 +17,9 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Baseball Machine Learning(BBML)" href="BBML.html" />
+    <link rel="prev" title="Directed Acyclic Graph Learning and Analysis(DAGLAs)" href="DAGLAs.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,10 +38,23 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="modules.html">pyskelton</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tips.html">Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ideanote.html">Idea Note</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ideanote.html">Idea Note</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DeepKF.html">Deep Kalman Filter(DeepKF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="KnoGra.html">Knowledge Graph(KnoGra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DAGLAs.html">Directed Acyclic Graph Learning and Analysis(DAGLAs)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GraphVizPlotly(gvplotly)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">要求項目・実装メモ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">想定構造</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">類似したもの</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#memo">memo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="BBML.html">Baseball Machine Learning(BBML)</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -56,6 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="ideanote.html">Idea Note</a> &raquo;</li>
       <li>GraphVizPlotly(gvplotly)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/GraphVizPlotly.md.txt" rel="nofollow"> View page source</a>
@@ -76,8 +92,9 @@
 <li><p>エッジは注釈機能を使うが、ノードと被らないようにするのが難しい。</p></li>
 <li><p>ノードにマウスオーバーすると、ノードと関連エッジの数値が出る。</p></li>
 </ul>
+</section>
 <section id="id2">
-<h3>想定構造<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<h2>想定構造<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gvplotly/   
 <span class="p">|</span>- __init__.py
 <span class="p">|</span>- digviz.py  <span class="c1"># 基本はFigure</span>
@@ -89,7 +106,6 @@
 <span class="p">|</span>- utils.py <span class="c1"># utility functions</span>
 </pre></div>
 </div>
-</section>
 </section>
 <section id="id3">
 <h2>類似したもの<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
@@ -124,7 +140,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DAGLAs.html" class="btn btn-neutral float-left" title="Directed Acyclic Graph Learning and Analysis(DAGLAs)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BBML.html" class="btn btn-neutral float-right" title="Baseball Machine Learning(BBML)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
