@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraphVizPlotly(gvplotly) &mdash; pymisc 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pymisc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">pyskelton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideanote.html">Idea Note</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pymisc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>GraphVizPlotly(gvplotly)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/GraphVizPlotly.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graphvizplotly-gvplotly">
+<h1>GraphVizPlotly(gvplotly)<a class="headerlink" href="#graphvizplotly-gvplotly" title="Permalink to this headline"></a></h1>
+<p>有向グラフをインタラクティブに可視化する手法があまりいいいのが見当たらなかったので、graphviz, plotlyの組み合わせで自作してみる。</p>
+<section id="id1">
+<h2>要求項目・実装メモ<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>ノードの配置はgraphvizで行って、描画自体はplotlyでやる</p></li>
+<li><p>エッジは注釈機能を使うが、ノードと被らないようにするのが難しい。</p></li>
+<li><p>ノードにマウスオーバーすると、ノードと関連エッジの数値が出る。</p></li>
+</ul>
+<section id="id2">
+<h3>想定構造<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gvplotly/   
+<span class="p">|</span>- __init__.py
+<span class="p">|</span>- digviz.py  <span class="c1"># 基本はFigure</span>
+<span class="p">|</span> <span class="p">|</span>- class Figure<span class="o">()</span>  
+<span class="p">|</span> <span class="p">|</span>- 他の同梱物があまり思いつかない...  
+<span class="p">|</span>- loader.py  <span class="c1"># data loader</span>
+<span class="p">|</span> <span class="p">|</span>- def test_dig<span class="o">()</span> -&gt; nx.DiGraph<span class="o">()</span>
+<span class="p">|</span> <span class="p">|</span>- def load_pandas<span class="o">()</span>
+<span class="p">|</span>- utils.py <span class="c1"># utility functions</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2>類似したもの<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>dash-interactive-graphvizは似たような感じかと思って試してはみたが、dashを使わなければならない点や、編集できる機能が必要かどうか微妙なため、保留。それよりは、マウスオーバーした時の反応や関連特徴量の見せ方などの方が大事なので、差別化するようなものにする。</p></li>
+</ul>
+</section>
+<section id="memo">
+<h2>memo<a class="headerlink" href="#memo" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p>networkx -&gt; graphvizとするには、やはりpygraphvizが必要なので、逃げられない。(というか、networkxが内部でpygraphvizを使っているようで、pip installはしておいてあげないといけない。)</p></li>
+<li><p>gvplotlyはpackageをパッケージとして</p>
+<ul class="simple">
+<li><p>digviz.py: directed graph</p></li>
+<li><p>gviz.py: non-directed graph</p></li>
+</ul>
+<p>のvisualization toolとしてモジュールを持っておきたい。</p>
+</li>
+<li><p>digvizは内部に</p>
+<ul class="simple">
+<li><p>Figure(class): 図の描画などを担当するメインクラス</p></li>
+<li><p>GAttr(func): Graph attributeの設定</p></li>
+<li><p>NAttr(func): Node attrの設定</p></li>
+<li><p>EAttr(func): Edge attrの設定</p></li>
+</ul>
+<p>など有向グラフを効果的にインテラクティブにするための関数を揃えておく。</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Dai KOBAYASHI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

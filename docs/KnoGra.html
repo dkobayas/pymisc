@@ -45,6 +45,7 @@
 <li class="toctree-l2"><a class="reference internal" href="DAGLAs.html">Directed Acyclic Graph Learning and Analysis(DAGLAs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="BBML.html">Baseball Machine Learning(BBML)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Knowledge Graph(KnoGra)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">想定構造</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
@@ -82,8 +83,22 @@
 <p>ナレッジをグラフ図の形式で残す、方向性の策定とかツールの案</p>
 <ul class="simple">
 <li><p>残し方</p></li>
-<li><p>活用の仕方</p></li>
+<li><p>活用の仕方
+Knoredge Graphの元になるデータの雛形(knodat)を定義して、
+それに基づいたKnoredge Graph(knogra)の学習と形式、利用のためのツールを作りたい。</p></li>
 </ul>
+<section id="id1">
+<h2>想定構造<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>knogra/  
+<span class="p">|</span>- __init__.py
+<span class="p">|</span>- knodat.py  <span class="c1"># loaderも兼ねる？</span>
+<span class="p">|</span> <span class="p">|</span>- class data<span class="o">()</span>  
+<span class="p">|</span>- knogra.py  
+<span class="p">|</span> <span class="p">|</span>- class graph<span class="o">()</span>
+<span class="p">|</span>- utils.py
+</pre></div>
+</div>
+</section>
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <ul class="simple">
@@ -96,6 +111,8 @@
 推理小説の犯人を当てるために、知識グラフを利用した推論を行うAIを作る企画。過去作品の戦略などは参考になりそう。</p></li>
 <li><p><a class="reference external" href="https://www.insource.co.jp/bup/bup_knowledge_manage.html">ナレッジマネジメント研修</a>:<br />
 もっと一般的な話として、ナレッジを残すための研修。データ解析的なこととは直接的に関係はないと思われる。</p></li>
+<li><p><a class="reference external" href="https://www.slideshare.net/slideshow/embed_code/key/sUFyAp6X4TI0IL">情報システム障害解析のための知識グラフ構築の試み(NTT)</a>:<br />
+実際に、ナレッジグラフを構築しようとしている。</p></li>
 </ul>
 </section>
 </section>

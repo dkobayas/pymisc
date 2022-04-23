@@ -3,6 +3,19 @@
 ナレッジをグラフ図の形式で残す、方向性の策定とかツールの案
 - 残し方
 - 活用の仕方
+Knoredge Graphの元になるデータの雛形(knodat)を定義して、
+それに基づいたKnoredge Graph(knogra)の学習と形式、利用のためのツールを作りたい。
+
+## 想定構造
+```sh
+knogra/  
+|- __init__.py
+|- knodat.py  # loaderも兼ねる？
+| |- class data()  
+|- knogra.py  
+| |- class graph()
+|- utils.py
+```
 
 ## Reference
 
@@ -15,4 +28,6 @@
     推理小説の犯人を当てるために、知識グラフを利用した推論を行うAIを作る企画。過去作品の戦略などは参考になりそう。
 - [ナレッジマネジメント研修](https://www.insource.co.jp/bup/bup_knowledge_manage.html):  
     もっと一般的な話として、ナレッジを残すための研修。データ解析的なこととは直接的に関係はないと思われる。
+- [情報システム障害解析のための知識グラフ構築の試み(NTT)](https://www.slideshare.net/slideshow/embed_code/key/sUFyAp6X4TI0IL):  
+    実際に、ナレッジグラフを構築しようとしている。
 

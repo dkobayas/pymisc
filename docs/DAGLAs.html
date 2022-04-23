@@ -91,6 +91,21 @@
 <li><p>CausalNex</p></li>
 <li><p>DAG-GNN</p></li>
 </ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>daglas/  
+<span class="p">|</span>- __init__.py
+<span class="p">|</span>- learner.py <span class="c1"># DAG learning</span>
+<span class="p">|</span> <span class="p">|</span>- class dag_gnn<span class="o">()</span>  
+<span class="p">|</span> <span class="p">|</span>- class dag_notears<span class="o">()</span>   
+<span class="p">|</span>- addition.py <span class="c1"># insert new edges from new node in learned DAG</span>
+<span class="p">|</span>- adaption.py <span class="c1"># learn based on learned DAG  </span>
+<span class="p">|</span>- prediction.py <span class="c1"># predict based on learned DAG</span>
+<span class="p">|</span>- loader.py <span class="c1"># data loader</span>
+<span class="p">|</span> <span class="p">|</span>- def test_sample<span class="o">()</span>  
+<span class="p">|</span> <span class="p">|</span>- def load_pandas<span class="o">()</span>
+<span class="p">|</span>- utils.py <span class="c1"># utility funtions</span>
+</pre></div>
+</div>
+<p>出力はnx.DiGraph()形式にすることで、gvplotlyと連携が取れるようにする。</p>
 </section>
 <section id="id2">
 <h2>制限の入れ方など、追加機能<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>

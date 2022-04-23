@@ -43,6 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tips.html">Tips</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ideanote.html">Idea Note</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Deep Kalman Filter(DeepKF)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">想定構造</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reference">reference</a></li>
 </ul>
 </li>
@@ -80,12 +81,28 @@
              
   <section id="deep-kalman-filter-deepkf">
 <h1>Deep Kalman Filter(DeepKF)<a class="headerlink" href="#deep-kalman-filter-deepkf" title="Permalink to this headline"></a></h1>
-<p>DKFを実装し、利用しやすい形のAPIに落とし込みたい。</p>
+<p>DKFを実装し、利用しやすい形のAPIに落とし込みたい。
+以下のGitHubでは、PyroとPyTorchを使って実装しているようなので、真似て実装してみる。<a class="reference external" href="https://github.com/DanieleGammelli/DeepKalmanFilter">GitHub(Pyro+Pytorch)</a>
+Pyro, Pytorchの扱いに慣れるという意味も込めている。</p>
+<section id="id1">
+<h2>想定構造<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>deepkf/  
+<span class="p">|</span>- __init__.py
+<span class="p">|</span>- deepkf.py  
+<span class="p">|</span> <span class="p">|</span>- class model<span class="o">()</span>  
+<span class="p">|</span>- loader.py  
+<span class="p">|</span> <span class="p">|</span>- def test_sample<span class="o">()</span>
+<span class="p">|</span> <span class="p">|</span>- def load_pandas<span class="o">()</span>
+<span class="p">|</span>- utils.py
+</pre></div>
+</div>
+</section>
 <section id="reference">
 <h2>reference<a class="headerlink" href="#reference" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://arxiv.org/abs/1511.05121">paper</a></p></li>
 <li><p><a class="reference external" href="https://deeplearning.jp/wp-content/uploads/2017/07/DL_hacks_20151225.pdf">slides(jp)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/DanieleGammelli/DeepKalmanFilter">GitHub(Pyro+Pytorch)</a></p></li>
 </ul>
 </section>
 </section>
