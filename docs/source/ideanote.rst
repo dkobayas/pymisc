@@ -6,6 +6,7 @@ Idea Note
    :caption: Contents:
 
    DeepKF
-   DAGLAs
-   BBML
    KnoGra
+   DAGLAs
+   GraphvizPlotly
+   BBML
