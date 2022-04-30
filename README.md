@@ -1,23 +1,33 @@
 # pymysc
 
+![Update](https://img.shields.io/badge/update-2022/4/29-00a0a0.svg?longCache=true)
+
+## docs
 [GitHub Pages](https://dkobayas.github.io/pymisc/index.html)  
 [Read The Docs](https://pymisc.readthedocs.io/en/latest/)
 
 Miscellaneous things relating with Python coding.
-Components:
+
+## Components:
+```sh
 - README.md
 - pyskelton/
-    - _ _ init _ _.py
+    - __init__.py
     - example.py
 - docs/
-    - pyskelton package
-    - tips
-    - idea note
+    - [pyskelton package]
+    - [tips]
+    - [idea note]
 - setup.py
 - notebook/
     - ipynb
+- paper-reading
+    - [title] # pdf and md should be made as a pair
+        - paper.pdf
+        - summary.md 
+```
 
-## setup for pyskelton and sphinx
+## Setup for pyskelton and sphinx
 
 (for bash on mac)
 ```sh
