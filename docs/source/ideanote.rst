@@ -10,3 +10,5 @@ Idea Note
    DAGLAs
    GraphVizPlotly
    BBML
+   physlearn
+   circuit_model
