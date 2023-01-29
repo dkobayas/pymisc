@@ -25,6 +25,8 @@ Miscellaneous things relating with Python coding.
     - [title] # pdf and md should be made as a pair
         - paper.pdf
         - summary.md 
+- ipywidgets_samples
+    - README.md
 ```
 
 ## Setup for pyskelton and sphinx
@@ -40,4 +42,3 @@ $ pip install -e .
 
 This can be used as the template of the python package to share.
 Not only such an usage, docs can be used to share some tips, reminders, and idea notes.
-
