@@ -11,4 +11,4 @@
       "Insightics", "PlasInaly"
     - Plasma Etching Investigation Analytics Test-Site/Farm
       "Investics", "Plasma Investics"
-    - Iconß
+    - Icon
